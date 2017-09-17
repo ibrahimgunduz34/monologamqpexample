@@ -18,4 +18,7 @@ parameters:
     # A secret key that's used to generate certain security-related tokens
     secret: ThisTokenIsNotSoSecretChangeIt
 
-    rabbitmq_host: "rabbitmq"
+    rabbitmq_host: rabbitmq
+    rabbitmq_user: guest
+    rabbitmq_password: guest
+    rabbitmq_logging_vhost: logging

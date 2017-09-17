@@ -13,6 +13,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 RUN docker-php-ext-install bcmath
 
-USER www-data	
+USER www-data
 
 WORKDIR /var/www/testapp
