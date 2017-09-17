@@ -29,6 +29,9 @@ class AppKernel extends Kernel
             }
         }
 
+        $bundles[] = new OldSound\RabbitMqBundle\OldSoundRabbitMqBundle();
+
+
         return $bundles;
     }
 

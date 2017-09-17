@@ -18,6 +18,7 @@
         "doctrine/doctrine-bundle": "^1.6",
         "doctrine/orm": "^2.5",
         "incenteev/composer-parameter-handler": "^2.0",
+        "php-amqplib/rabbitmq-bundle": "^1.13",
         "sensio/distribution-bundle": "^5.0.19",
         "sensio/framework-extra-bundle": "^3.0.2",
         "symfony/monolog-bundle": "^3.1.0",

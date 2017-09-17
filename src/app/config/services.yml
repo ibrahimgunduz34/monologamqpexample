@@ -33,3 +33,8 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+
+    monolog_amqp_channel:
+        class: PhpAmqpLib\Channel\AMQPChannel
+        arguments:
+          - "@old_sound_rabbit_mq.connection.logging"

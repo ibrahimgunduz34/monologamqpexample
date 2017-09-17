@@ -67,3 +67,17 @@ swiftmailer:
     username: '%mailer_user%'
     password: '%mailer_password%'
     spool: { type: memory }
+
+old_sound_rabbit_mq:
+    connections:
+        logging:
+            host: '%rabbitmq_host%'
+            user: '%rabbitmq_user%'
+            password: '%rabbitmq_password%'
+            vhost: '%rabbitmq_logging_vhost%'
+    producers:
+        logging:
+            connection: logging
+            exchange_options:
+                name: logging
+                type: direct
