@@ -31,7 +31,7 @@ $ sudo docker-compose exec rabbitmq rabbitmqctl set_permissions -p logging guest
 $ sudo docker-compose exec php /var/www/testapp/src/bin/console rabbitmq:setup-fabric
 ```
 
-You can access graylog from: 172.20.0.7 with the following credentials:
+You can access graylog from: http://172.20.0.7:9000 with the following credentials:
 username: admin
 password: admin
 
