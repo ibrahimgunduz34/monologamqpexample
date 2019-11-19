@@ -1,4 +1,4 @@
-<?php
+<?
 namespace AppBundle\Command;
 
 use Psr\Log\LoggerInterface;
@@ -18,13 +18,27 @@ class TestCommand extends ContainerAwareCommand
     {
         /** @var LoggerInterface $logger */
         $logger = $this->getContainer()->get('logger');
-        $output->writeln('Test messages are sending to message queue now. Please press CTRL+C to break this process.');
-        while(true) {
-            $logger->error('Some error occurred while doing sometihng.', [
-                'some_value'    => 'ABC',
-                'another_value' => 1532,
-            ]);
-            usleep(500);
+        $output->writeln('Test messages are sending to message queue now. Please press CTRL+C to break t');
+        $i=2;
+        while($i>1) {            
+            if($i%2==0){
+                $r=random_int(-1000, 0);
+                $logger->error('Some error occurred while doing sometihng.', [
+                            'some_value'    => 'ABC '.$r,
+                            'another_value' => $r,
+                        ]);
+                        usleep(500);
+            }else{ 
+                $r=random_int(-1000, 0);
+                $logger->warning('Some warning occurred while doing sometihng.', [
+                            'some_value'    => 'ABC '.$r,
+                            'another_value' => $r,
+                        ]);
+                        usleep(500);
+            }
+            $i++;
+       
         }
     }
 }
+
